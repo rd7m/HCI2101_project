@@ -16,7 +16,7 @@ body.dark {
 header {
     background-color: #e9ecef; 
     color: #2c3e50; 
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
     border-bottom: 3px solid #2c3e50;
 }
@@ -25,6 +25,13 @@ body.dark header {
     background-color: #2c3e50;
     color: white;
     border-bottom-color: #007bff;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 p {
@@ -48,7 +55,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -86,10 +93,10 @@ body.dark .member-card {
 
 #general {
     background-color: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    border-left: 5px solid #007bff;
+    padding: 25px;
+    margin: 20px 0;
+    border-inline-start: 5px solid #007bff;
+    border-radius: 4px;
 }
 
 body.dark #general {
@@ -99,13 +106,22 @@ body.dark #general {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+    display: block;
+}
+
+thead, tbody, tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
 
 th, td {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 12px 8px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 th {
@@ -123,23 +139,30 @@ th {
     width: 120px;
     height: auto;
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
     border-radius: 4px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #f0f2f5;
+    padding: 25px;
+    background-color: #2c3e50;
     color: white;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .member-card {
         width: 95%;
+        margin: 10px 2.5%;
     }
-    .maya-book {
-        width: 100px;
+    
+    main {
+        padding: 0 15px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px 4px;
     }
 }
